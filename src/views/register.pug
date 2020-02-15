@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>#{title}</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    //- <div class="app">
+    //-     <div class="description">
+    //-         <h1>#{title}</h1>
+    //-         <p>Renseignez les champs pour vous inscrire</p>
+    //-     </div>
+    //-     <div class="form-side">
+    //-         <form action="/create" method="post">
+    //-         <p style=color:red;>#{message}</p>
+    //-             <div>Nom :</div>
+    //-             <input type="text" id="name" name="name" require placeholder="Entrez votre nom">
+    //-             <div>Email : </div>
+    //-             <input type="email" name="email" id="email" require placeholder="Enter votre email">
+    //-             <div>Mot de passe : </div>
+    //-             <input type="password" name="password" id="password" require placeholder="Enter un mot de passe">
+    //-             <div>Confirmez mot de passe : </div>
+    //-             <input type="password" name="c_password" id="c_password" require placeholder="Confirmez votre mot de passe">
+    //-             <input type="submit" value="Créer mon compte">
+    //-             <div id="">
+    //-             <p>Pas de compte ??? <a href="/login">Connectez-vous</a></p>
+    //-             </div>
+    //-         </form>
+
+    //-     </div>
+    //- </div>
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="text-center border border-light  my-4 col-4 offset-4 bg-light">
+                <h1>#{title}</h1>
+                <p>Renseignez les champs pour vous inscrire</p>
+            </div>    
+        </div>
+        <div class="row">
+            <form class="text-center border border-light p-5 my-4 col-4 offset-4 bg-light" action="/create"  method="post">
+
+                    <p class="h4 mb-4">INSCRIPTION</p>
+                    <p style=color:red;>#{message}</p>
+                     
+                    <input type="text" id="name" name="name" require placeholder="Entrez votre login" class="form-control mb-4" >
+                
+                    <input type="email" id="email" name="email" require placeholder="Entrez votre email" class="form-control mb-4" >
+                    
+                    <input type="password" id="password" name="password" class="form-control mb-4" placeholder="Entrez un mot de passe" required>
+                    
+                    <input type="password" id="c_password" name="c_password" class="form-control mb-4" placeholder="Confirmez votre mot de passe" required>
+
+                    <button class="btn btn-info btn-block my-4" type="submit">INSCRIPTION</button>
+                
+                    <p>Déja inscris ? <a href="/login">Connectez-vous</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>
