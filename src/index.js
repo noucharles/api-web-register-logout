@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 8080;
 const mongoose = require('mongoose');
 
 app.set('port', (process.env.PORT || 8080));
@@ -27,10 +27,10 @@ app.get('/home' , (req , res) =>{ res.render('home' , {name : req.body.login}) }
 
 var options = {useNewUrlParser:true , useUnifiedTopology: true};
 
-// mongoose.connect('mongodb://localhost:27017/test',options);
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost:27017/test',options);
 
-mongoose.connect('mongodb+srv://nodetest:nodetest123@clusternkc-91ego.mongodb.net/test?retryWrites=true&w=majority'
-,options);
+// mongoose.connect('mongodb+srv://nodetest:nodetest123@clusternkc-91ego.mongodb.net/test?retryWrites=true&w=majority'
+// ,options);
 
 // mongodb+srv://nodetest:<password>@clusternkc-91ego.mongodb.net/test?retryWrites=true&w=majority
 let db = mongoose.connection;
