@@ -29,7 +29,7 @@ var options = {useNewUrlParser:true , useUnifiedTopology: true};
 
 // mongoose.connect('mongodb://localhost:27017/test',options);
 
-mongoose.connect("mongodb+srv://nodetest:nodetest123@clusternkc-91ego.mongodb.net/test?retryWrites=true&w=majority"
+mongoose.connect('mongodb+srv://nodetest:nodetest123@clusternkc-91ego.mongodb.net/test?retryWrites=true&w=majority'
 ,options);
 
 // mongodb+srv://nodetest:<password>@clusternkc-91ego.mongodb.net/test?retryWrites=true&w=majority
